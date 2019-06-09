@@ -1,0 +1,11 @@
+post_install() {
+    if [ "$(file -i /etc/default/grub | grep symlink)" != "" ]; then
+        mv -f /etc/default/grub /usr/share/biglinux-divert/grub-default
+        ln -s /usr/share/biglinux-divert/grub-config-biglinux /etc/default/grub
+    fi
+}
+
+pre_remove() {
+    rm -f /etc/default/grub
+    mv -f /usr/share/biglinux-divert/grub-default /etc/default/grub
+} 

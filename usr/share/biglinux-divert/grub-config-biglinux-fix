@@ -1,0 +1,6 @@
+#!/bin/bash
+
+if [ "$(file -i /etc/default/grub | grep symlink)" != "" ]; then
+    mv -f /etc/default/grub /usr/share/biglinux-divert/grub-default
+    ln -s /usr/share/biglinux-divert/grub-config-biglinux /etc/default/grub
+fi
