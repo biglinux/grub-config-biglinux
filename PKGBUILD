@@ -1,7 +1,7 @@
 # Maintainer: Bruno Goncalves <biglinux.com.br>
 
 pkgname=grub-config-biglinux
-pkgver=1
+pkgver=1_r3_2019_06_09
 pkgrel=1
 arch=('any')
 license=('')
